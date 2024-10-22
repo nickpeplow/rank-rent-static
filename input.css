@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overscroll-behavior: none;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-inline: auto;
+}
+
+.bg-size-100 {
+  background-size: 100%;
+}
+
+.cta-wrapper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  border-radius: 12px 12px 0 0;
+  background-color: #003966;
+  z-index: 4;
+}
+
+.cta-left-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1px;
+  width: 17px;
+  height: 100%;
+  border-top-right-radius: 10px;
+  background-color: #fff;
+  z-index: 6;
+}
+
+.cta-right-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -1px;
+  width: 17px;
+  height: 100%;
+  border-top-left-radius: 10px;
+  background-color: #fff;
+  z-index: 6;
+}
+
+.hero-shape {
+  transform: rotateY(180deg);
+}
+
+.testimonials-slider__dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 20px;
+}
+.testimonials-slider__dots button.owl-dot {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #003966;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+}
+.testimonials-slider__dots button.owl-dot:hover,
+.testimonials-slider__dots button.owl-dot.active {
+  background-color: #003966;
+}
+
+.testimonials-slider__nav {
+  display: none;
+}
+.testimonials-slider__nav button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #003966;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  color: #003966;
+  padding-bottom: 10px;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+.testimonials-slider__nav button:hover {
+  background-color: #003966;
+  color: #fff;
+}
+.testimonials-slider__nav .owl-prev {
+  left: 0;
+  padding-right: 2px;
+}
+.testimonials-slider__nav .owl-next {
+  right: 0;
+  padding-left: 2px;
+}
+
+.nav-menu {
+  transform: translateX(100%);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.nav-menu.show {
+  transform: translateX(0);
+}
+
+.backdrop {
+  display: none;
+}
+.backdrop.show {
+  display: block;
+}
+
+.services-cards {
+  height: 0;
+}
+.services-cards.show {
+  height: auto;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .backdrop.show {
+    display: none;
+  }
+  .testimonials-slider__nav {
+    display: block;
+  }
+}
