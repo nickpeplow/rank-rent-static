@@ -31,6 +31,24 @@
       href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css"
     />
 
+    <style>
+      :root {
+        --primary: #2d3e61;
+        --secondary: #39476b;
+        --overlay: rgba(57, 71, 107, 0.7);
+        --tertiary: #ebf4fb;
+        --orange: #f26101;
+        --yellow: #facc15;
+        --red: #ed3f3f;
+        --green: #06b66f;
+        --black: #212121;
+        --white: #ffffff;
+        --gray: #f6f6f6;
+        --gray-100: #f3f4f6;
+        --gray-200: #e5e7eb;
+        --gray-400: #d6d6d6;
+      }
+    </style>
     <!-- ============ Style ============= -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Local Business</title>
@@ -38,14 +56,14 @@
 
   <body class="relative">
     <!-- ===================== Header Start ================== -->
-    <header class="sticky top-0 bg-slate-900 shadow-md md:shadow-none md:static md:bg-white z-40">
+    <header class="sticky top-0 bg-whiteColor shadow-md md:shadow-none md:static z-40">
       <!-- ---------------- Info ------------- -->
-      <div class="hidden bg-slate-100 py-3 md:block">
+      <div class="hidden bg-tertiary py-3 md:block">
         <div class="wrapper flex items-center justify-center gap-5">
           <!-- Info Item 1 -->
           <div class="lg:w-1/4 flex items-center gap-2.5">
             <div
-              class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-primary text-xl text-white"
+              class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-primary text-xl text-whiteColor"
             >
               <i class="fa-solid fa-star"></i>
             </div>
@@ -53,7 +71,7 @@
             <div class="flex-1">
               <p class="text-sm leading-tight flex items-center gap-2">
                 <span class="block font-medium">4.9 Star Rating </span>
-                <span class="block text-xs text-yellow-500 tracking-tighter">
+                <span class="block text-xs text-yellowColor tracking-tighter">
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
@@ -68,7 +86,7 @@
           <!-- Info Item 2 -->
           <div class="lg:w-1/4 flex items-center gap-2.5">
             <div
-              class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-primary text-xl text-white"
+              class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-primary text-xl text-whiteColor"
             >
               <i class="fa-solid fa-location-dot"></i>
             </div>
@@ -82,7 +100,7 @@
           <!-- Info Item 3 -->
           <div class="lg:w-1/4 flex items-center gap-2.5">
             <div
-              class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-primary text-xl text-white"
+              class="flex-shrink-0 flex items-center justify-center rounded-full w-10 h-10 bg-primary text-xl text-whiteColor"
             >
               <i class="fa-solid fa-clock"></i>
             </div>
@@ -111,10 +129,8 @@
             <h2
               class="flex-1 flex flex-col text-lg font-bold leading-none md:text-xl md:leading-none lg:text-2xl lg:leading-none"
             >
-              <span class="text-base text-blue-400 md:text-primary md:text-lg lg:text-xl"
-                >Aberdeen</span
-              >
-              <span class="text-white md:text-black">Locksmith</span>
+              <span class="text-base text-primary md:text-lg lg:text-xl">Aberdeen</span>
+              <span class="text-blackColor">Locksmith</span>
             </h2>
           </a>
 
@@ -146,13 +162,17 @@
           </div>
 
           <!-- CTA -->
-          <div class="hidden relative cta-wrapper bg-white -mt-2 -translate-y-2.5 px-px lg:flex">
+          <div
+            class="hidden relative cta-wrapper bg-whiteColor -mt-2 -translate-y-2.5 px-px lg:flex"
+          >
             <div class="cta-left-line relative w-4 h-10 bg-primary mt-2"></div>
             <div class="flex-1 flex items-center gap-2 bg-primary px-4 py-3 rounded-b-xl">
               <div class="bg-size-100 bg-24-seven w-14 h-14 bg-no-repeat"></div>
               <div class="flex-1">
-                <a href="tel:01125125125" class="text-2xl font-bold text-white">01125 125 125</a>
-                <p class="uppercase text-yellow-400 text-xs whitespace-nowrap">
+                <a href="tel:01125125125" class="text-2xl font-bold text-whiteColor"
+                  >01125 125 125</a
+                >
+                <p class="uppercase text-yellowColor text-xs whitespace-nowrap">
                   24/7 Locksmith Service Dedicated Line
                 </p>
               </div>
@@ -160,7 +180,7 @@
             <div class="cta-right-line relative w-4 h-10 bg-primary mt-2"></div>
           </div>
 
-          <button class="text-2xl text-white lg:hidden" id="menu-toggler">
+          <button class="text-2xl text-blackColor lg:hidden" id="menu-toggler">
             <i class="fa-solid fa-bars"></i>
           </button>
         </div>
@@ -168,120 +188,86 @@
 
       <!-- ------ Mobile Menu -------- -->
       <nav
-        class="nav-menu max-w-[340px] w-full max-h-dvh fixed top-[63px] bottom-0 right-0 py-5 px-6 bg-slate-900 border-t border-slate-800 overflow-y-auto z-40 md:hidden"
+        class="nav-menu max-w-[340px] w-full max-h-dvh fixed top-[67px] bottom-0 right-0 py-5 px-6 bg-whiteColor border-t border-gray-200 overflow-y-auto z-40 md:hidden"
         id="nav-menu"
       >
-        <ul class="flex flex-col gap-1 text-white pb-4">
+        <ul class="flex flex-col gap-1 font-raleway text-blackColor pb-4">
           <li>
-            <a href="#" class="menu-link block py-px font-raleway">Locksmith</a>
+            <a href="#" class="menu-link block py-px">Locksmith</a>
           </li>
           <li>
-            <a href="#about" class="menu-link block py-px font-raleway">About</a>
+            <a href="#about" class="menu-link block py-px">About</a>
           </li>
           <li>
-            <a href="#services" class="menu-link block py-px font-raleway">Services</a>
+            <a href="#services" class="menu-link block py-px">Services</a>
           </li>
           <li>
-            <a href="#location" class="menu-link block py-px font-raleway">Locations</a>
+            <a href="#location" class="menu-link block py-px">Locations</a>
           </li>
           <li>
-            <a href="#contact" class="menu-link block py-px font-raleway">Contact Us</a>
+            <a href="#contact" class="menu-link block py-px">Contact Us</a>
           </li>
 
-          <li class="group">
-            <ul class="flex flex-col gap-1 font-raleway">
-              <p class="font-bold mt-2.5 mb-2">General Locksmith Services</p>
+          <li class="ps-3">
+            <ul class="flex flex-col gap-1">
+              <p class="font-bold mt-2.5 mb-1.5 -ms-3">General Locksmith Services</p>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>All Locksmith Services</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>Non Destructive Entry</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>Lock Changes & Repairs</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>Burglary Repairs</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>Get a Quote</span>
                 </a>
               </li>
-            </ul>
-
-            <ul class="flex flex-col gap-1 font-raleway">
-              <p class="font-bold mt-2.5 mb-2">Home Security</p>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>Smart Locks</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>Alarm Installation</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>HD CCTV Installation</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>Security Surveys</span>
                 </a>
               </li>
               <li>
-                <a
-                  href="#"
-                  class="menu-link inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                >
-                  <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                <a href="#" class="menu-link inline-flex items-center gap-1.5 py-px">
+                  <span class="text-sm"><i class="fa-solid fa-arrow-right"></i></span>
                   <span>How Safe is Your Neighbourhood?</span>
                 </a>
               </li>
@@ -290,24 +276,24 @@
         </ul>
       </nav>
     </header>
-    <div class="backdrop fixed inset-0 bg-black/60 md:hidden z-30" id="backdrop"></div>
+    <div class="backdrop fixed inset-0 bg-overlay md:hidden z-30" id="backdrop"></div>
     <!-- ===================== Header End ================== -->
 
     <!-- ===================== Nav Menu Start ================== -->
     <nav class="hidden sticky top-0 z-50 md:block">
-      <div class="relative bg-slate-900 pt-px shadow-md">
+      <div class="relative bg-primary pt-px shadow-md">
         <div class="wrapper">
-          <ul class="flex items-center text-white">
+          <ul class="flex items-center font-raleway text-whiteColor">
             <li>
               <a
                 href="#"
-                class="inline-block py-2.5 px-4 ps-0 font-raleway transition-all duration-200 hover:bg-white hover:text-black"
+                class="inline-block py-2.5 px-4 transition-all duration-200 hover:bg-whiteColor hover:text-blackColor"
                 >Locksmith</a
               >
             </li>
             <li class="group">
               <div
-                class="flex items-center gap-2 cursor-pointer py-2.5 px-4 font-raleway transition-all duration-200 group-hover:bg-white group-hover:text-black"
+                class="flex items-center gap-2 cursor-pointer py-2.5 px-4 transition-all duration-200 group-hover:bg-whiteColor group-hover:text-blackColor"
               >
                 <span>Locksmith Services</span>
                 <span class="text-base">
@@ -317,131 +303,164 @@
 
               <!-- ---------- Mega Menu ------------ -->
               <div
-                class="absolute top-full bg-white left-0 w-full py-4 hidden group-hover:block shadow-md z-50"
+                class="absolute top-full bg-whiteColor left-0 w-full py-4 hidden group-hover:block shadow-md z-50"
               >
                 <div class="wrapper">
                   <div class="grid grid-cols-3">
                     <!-- Genetal Links -->
-                    <ul class="flex flex-col gap-1 text-black font-raleway">
-                      <p class="font-bold my-2.5">General Locksmith Services</p>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>All Locksmith Services</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>Non Destructive Entry</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>Lock Changes & Repairs</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>Burglary Repairs</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>Get a Quote</span>
-                        </a>
-                      </li>
-                    </ul>
+                    <div class="col-span-2 text-blackColor pt-2.5">
+                      <p class="font-bold mb-2.5">General Locksmith Services</p>
+                      <ul class="grid grid-cols-2 gap-y-1 gap-x-4">
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>All Locksmith Services</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Non Destructive Entry</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Lock Changes & Repairs</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Burglary Repairs</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Get a Quote</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Smart Locks</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Alarm Installation</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>HD CCTV Installation</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Security Surveys</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>How Safe is Your Neighbourhood?</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>All Locksmith Services</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Non Destructive Entry</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Lock Changes & Repairs</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-tertiary"
+                          >
+                            <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
+                            <span>Burglary Repairs</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
 
-                    <!-- Home Security Links -->
-                    <ul class="flex flex-col gap-1 text-black font-raleway">
-                      <p class="font-bold my-2.5">Home Security</p>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>Smart Locks</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>Alarm Installation</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>HD CCTV Installation</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>Security Surveys</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="#"
-                          class="inline-flex items-center gap-1.5 text-sm py-1 px-2 transition-all duration-200 hover:bg-gray-200"
-                        >
-                          <span class="text-xs"><i class="fa-solid fa-arrow-right"></i></span>
-                          <span>How Safe is Your Neighbourhood?</span>
-                        </a>
-                      </li>
-                    </ul>
-
-                    <div>
+                    <div class="flex items-center">
                       <img class="w-full h-auto" src="https://placehold.co/300x150" alt="Image" />
                     </div>
                   </div>
                 </div>
-                <div class="wrapper border border-gray-200 py-4 mt-5 mb-2.5">
-                  <h3 class="text-center text-2xl font-semibold mb-3 text-black">
+                <div class="wrapper font-sans border border-gray-200 py-4 mt-5 mb-2.5">
+                  <h3 class="text-center text-2xl font-semibold mb-3 text-blackColor">
                     Need a locksmith in Highcliffe right now? Call us for 24/7 locksmith response
                   </h3>
 
                   <div class="flex items-center justify-center gap-0.5">
                     <a
                       href="tel:01125125125"
-                      class="text-2xl font-bold text-primary leading-none p-1 transition duration-200 hover:text-primary-2"
+                      class="text-2xl font-bold text-primary leading-none p-1 transition duration-200 hover:text-primary"
                       >01125125125</a
                     >
-                    <span class="text-gray-300 text-xl leading-none">&#9474;</span>
+                    <span class="text-gray-200 text-xl leading-none">&#9474;</span>
 
                     <a
                       href="tel:01125125125"
-                      class="text-2xl font-bold text-primary leading-none p-1 transition duration-200 hover:text-primary-2"
+                      class="text-2xl font-bold text-primary leading-none p-1 transition duration-200 hover:text-primary"
                       >01125125125</a
                     >
                   </div>
@@ -451,28 +470,28 @@
             <li>
               <a
                 href="#about"
-                class="inline-block py-2.5 px-4 font-raleway transition-all duration-200 hover:bg-white hover:text-black"
+                class="inline-block py-2.5 px-4 font-raleway transition-all duration-200 hover:bg-whiteColor hover:text-blackColor"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="#services"
-                class="inline-block py-2.5 px-4 font-raleway transition-all duration-200 hover:bg-white hover:text-black"
+                class="inline-block py-2.5 px-4 font-raleway transition-all duration-200 hover:bg-whiteColor hover:text-blackColor"
                 >Services</a
               >
             </li>
             <li>
               <a
                 href="#location"
-                class="inline-block py-2.5 px-4 font-raleway transition-all duration-200 hover:bg-white hover:text-black"
+                class="inline-block py-2.5 px-4 font-raleway transition-all duration-200 hover:bg-whiteColor hover:text-blackColor"
                 >Locations</a
               >
             </li>
             <li>
               <a
                 href="#contact"
-                class="inline-block py-2.5 px-4 font-raleway transition-all duration-200 hover:bg-white hover:text-black"
+                class="inline-block py-2.5 px-4 font-raleway transition-all duration-200 hover:bg-whiteColor hover:text-blackColor"
                 >Contact Us</a
               >
             </li>
@@ -485,17 +504,19 @@
       <!-- ===================== Hero Start ================== -->
       <section class="-mt-px">
         <div class="relative bg-banner bg-cover bg-no-repeat bg-center">
-          <div class="absolute inset-0 bg-black/55"></div>
-          <div class="wrapper pt-20 relative z-20 md:pt-16">
+          <div class="absolute inset-0 bg-overlay"></div>
+          <div class="wrapper pt-20 pb-8 relative z-20 md:pb-4 md:pt-16 lg:pb-0">
             <div
-              class="flex flex-col-reverse items-center text-center w-full text-white lg:text-left lg:items-start lg:w-1/2"
+              class="flex flex-col-reverse items-center text-center w-full text-whiteColor lg:text-left lg:items-start lg:w-1/2"
             >
-              <h1 class="text-lg max-w-xl">
+              <h1 class="text-lg max-w-xl lg:text-xl">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae similique sequi
                 doloremque magnam praesentium dolore, laudantium quasi fuga veniam molestiae?
               </h1>
-              <h2 class="text-2xl font-bold mt-1 mb-3 sm:text-3xl">Locksmith Services</h2>
-              <p class="font-semibold">Lorem ipsum</p>
+              <h2 class="text-3xl font-bold mt-2 mb-4 sm:text-4xl lg:text-5xl">
+                Locksmith Services
+              </h2>
+              <p class="font-semibold text-lg md:text-xl lg:text-2xl">Lorem ipsum</p>
             </div>
 
             <!-- CTA -->
@@ -503,11 +524,13 @@
               <div class="flex items-center gap-3 bg-primary px-6 py-3 rounded-full">
                 <div class="bg-size-100 bg-24-seven w-16 h-16 bg-no-repeat"></div>
                 <div class="flex-1 text-center">
-                  <a href="tel:01125125125" class="text-3xl font-bold text-white">01125 125 125</a>
-                  <p class="uppercase text-yellow-400 text-xs whitespace-nowrap">
+                  <a href="tel:01125125125" class="text-3xl font-bold text-whiteColor"
+                    >01125 125 125</a
+                  >
+                  <p class="uppercase text-yellowColor text-xs whitespace-nowrap">
                     24/7 Locksmith Service Dedicated Line
                   </p>
-                  <p class="uppercase font-bold text-xl text-center text-white mt-1">
+                  <p class="uppercase font-bold text-xl text-center text-whiteColor mt-1">
                     Click To Call
                   </p>
                 </div>
@@ -517,84 +540,92 @@
             <div class="hidden lg:flex items-center gap-2.5 mt-8 sm:gap-4">
               <a
                 href="tel:01125125125"
-                class="inline-block py-2 px-4 text-white capitalize border border-primary bg-primary rounded-md transition-all duration-200 hover:bg-primary-2 hover:border-primary-2"
+                class="inline-block py-2 px-4 text-whiteColor capitalize border border-orangeColor bg-orangeColor rounded-md transition-all duration-200 hover:bg-transparent hover:text-orangeColor"
                 >Call (011) 2512-5125</a
               >
               <a
                 href="#services"
-                class="inline-block py-2 px-4 text-white capitalize border border-primary bg-primary rounded-md transition-all duration-200 hover:bg-primary-2 hover:border-primary-2"
+                class="inline-block py-2 px-4 text-orangeColor capitalize border border-orangeColor bg-transparent rounded-md transition-all duration-200 hover:bg-orangeColor hover:text-whiteColor"
                 >Our Services</a
               >
             </div>
 
             <!-- Hero Review -->
             <div
-              class="absolute -bottom-12 right-1/2 translate-x-1/2 z-20 flex items-center gap-1 min-w-[350px] bg-white rounded-sm p-2 shadow-sm sm:gap-2 sm:min-w-[400px] md:-bottom-14 lg:right-4 lg:translate-x-0 lg:p-3 lg:-bottom-20"
+              class="absolute -bottom-4 right-1/2 translate-x-1/2 z-20 flex items-center gap-1 min-w-[290px] bg-whiteColor rounded-sm p-2 shadow-sm sm:gap-2 md:-bottom-10 lg:right-4 lg:translate-x-0 lg:p-3 lg:bottom-auto lg:top-[64px]"
             >
-              <div class="flex items-center gap-px text-white text-xs leading-none md:text-sm">
-                <span class="flex items-center justify-center w-5 h-5 bg-green-700 md:w-6 md:h-6">
+              <div class="flex items-center gap-px text-whiteColor text-xs leading-none md:text-sm">
+                <span class="flex items-center justify-center w-5 h-5 bg-greenColor md:w-6 md:h-6">
                   <i class="fa-solid fa-star"></i>
                 </span>
-                <span class="flex items-center justify-center w-5 h-5 bg-green-700 md:w-6 md:h-6">
+                <span class="flex items-center justify-center w-5 h-5 bg-greenColor md:w-6 md:h-6">
                   <i class="fa-solid fa-star"></i>
                 </span>
-                <span class="flex items-center justify-center w-5 h-5 bg-green-700 md:w-6 md:h-6">
+                <span class="flex items-center justify-center w-5 h-5 bg-greenColor md:w-6 md:h-6">
                   <i class="fa-solid fa-star"></i>
                 </span>
-                <span class="flex items-center justify-center w-5 h-5 bg-green-700 md:w-6 md:h-6">
+                <span class="flex items-center justify-center w-5 h-5 bg-greenColor md:w-6 md:h-6">
                   <i class="fa-solid fa-star"></i>
                 </span>
-                <span class="flex items-center justify-center w-5 h-5 bg-green-700 md:w-6 md:h-6">
+                <span class="flex items-center justify-center w-5 h-5 bg-greenColor md:w-6 md:h-6">
                   <i class="fa-solid fa-star"></i>
                 </span>
               </div>
-              <p class="text-xs whitespace-nowrap sm:text-sm">
-                Highcliffe locksmith rated <b class="text-green-700">5/5</b>
+              <p class="text-sm whitespace-nowrap">
+                Highcliffe locksmith rated <b class="text-greenColor">5/5</b>
               </p>
-              <img
-                src="./assets/icons/reviewsio-logo.png"
-                class="w-14 sm:w-[70px]"
-                alt="Reviewsio Logo"
-              />
             </div>
           </div>
 
           <!-- Hero Shape -->
-          <div class="relative z-10 overflow-hidden">
-            <svg
-              class="-ms-1 -mb-1 hero-shape w-[150%] h-[110px]"
-              data-name="Layer 1"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 1200 120"
-              preserveAspectRatio="none"
-            >
-              <path
-                d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z"
-                class="shape-fill fill-primary"
-              ></path>
-            </svg>
+          <div class="relative z-10">
+            <div class="flex justify-end overflow-hidden">
+              <svg
+                class="-mb-1 min-w-[150%] w-full max-h-[110px] hero-shape"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1200 120"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M741,116.23C291,117.43,0,27.57,0,6V120H1200V6C1200,27.93,1186.4,119.83,741,116.23Z"
+                  class="fill-primary"
+                ></path>
+              </svg>
+            </div>
+
             <div class="py-3 bg-primary md:pt-5 md:pb-6">
               <ul
-                class="wrapper flex items-center justify-center flex-wrap gap-x-4 gap-y-2 text-sm text-white lg:gap-5"
+                class="wrapper flex items-center justify-center flex-wrap gap-x-6 gap-y-2 text-sm text-whiteColor lg:gap-x-8 xl:gap-x-10"
               >
-                <li class="flex items-center gap-1 text-sm md:text-base">
-                  <i class="fa-solid fa-check"></i>
+                <li class="flex items-center gap-2 text-sm md:text-base">
+                  <span class="text-orangeColor text-xl">
+                    <i class="fa-solid fa-check"></i>
+                  </span>
                   <span>Locksmiths Near You In Highcliffe</span>
                 </li>
-                <li class="flex items-center gap-1 text-sm md:text-base">
-                  <i class="fa-solid fa-house"></i>
+                <li class="flex items-center gap-2 text-sm md:text-base">
+                  <span class="text-orangeColor text-lg">
+                    <i class="fa-solid fa-house"></i>
+                  </span>
                   <span>Home & Business</span>
                 </li>
-                <li class="flex items-center gap-1 text-sm md:text-base">
-                  <i class="fa-solid fa-ban"></i>
+                <li class="flex items-center gap-2 text-sm md:text-base">
+                  <span class="text-orangeColor text-lg">
+                    <i class="fa-solid fa-ban"></i>
+                  </span>
                   <span>No Call Out Fee</span>
                 </li>
-                <li class="flex items-center gap-1 text-sm md:text-base">
-                  <i class="fa-regular fa-user"></i>
+                <li class="flex items-center gap-2 text-sm md:text-base">
+                  <span class="text-orangeColor text-lg xl:text-xl">
+                    <i class="fa-regular fa-user"></i>
+                  </span>
                   <span>DBS Checked</span>
                 </li>
-                <li class="flex items-center gap-1 text-sm md:text-base">
-                  <i class="fa-regular fa-thumbs-up"></i>
+                <li class="flex items-center gap-2 text-sm md:text-base">
+                  <span class="text-orangeColor text-lg xl:text-xl">
+                    <i class="fa-regular fa-thumbs-up"></i>
+                  </span>
                   <span>Work Guaranteed</span>
                 </li>
               </ul>
@@ -605,14 +636,13 @@
       <!-- ===================== Hero End ================== -->
 
       <!-- ===================== About US Start ================== -->
-      <article class="py-16" id="about">
+      <article class="py-8 lg:py-14" id="about">
         <div class="wrapper">
           <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-2xl font-bold mb-3 md:text-3xl">About US</h2>
-            <p class="font-medium sm:text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, voluptates impedit.
-              Pariatur excepturi veritatis alias? Aspernatur, voluptate incidunt saepe voluptatibus
-              qui at quidem adipisci, nobis suscipit hic ea voluptates doloremque?
+            <h2 class="text-2xl text-center font-bold mb-3 md:text-3xl">About Us</h2>
+            <p class="text-center">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae rem hic commodi dolore
+              dolorem esse!
             </p>
           </div>
 
@@ -718,12 +748,35 @@
                 </p>
               </div>
 
-              <div class="flex justify-center mt-4 lg:mt-5">
-                <img
-                  class="max-w-[200px] h-auto lg:max-w-full"
-                  src="./assets/icons/trading-standard-approved.jpg"
-                  alt="Trading Standard Apporved"
-                />
+              <div
+                class="hidden items-center gap-5 border border-gray-200 rounded-md shadow-md p-5 mt-4 lg:mt-5 md:flex"
+              >
+                <div class="w-[150px]">
+                  <img
+                    class="max-w-full w-full h-auto"
+                    src="https://placehold.co/150x150"
+                    alt="Avatar"
+                  />
+                  <p class="text-center font-semibold mt-2">John Due</p>
+                </div>
+                <div class="flex-1 pb-8">
+                  <h3 class="text-xl font-bold mb-4">Lorem ipsum dolor sit.</h3>
+                  <div class="flex flex-col mb-5">
+                    <a
+                      class="inline-block text-3xl font-semibold text-primary"
+                      href="tel:01125125125"
+                      >01125125125</a
+                    >
+                    <p class="text-sm text-gray-400 italic">(No text message)</p>
+                  </div>
+
+                  <p class="flex items-center gap-1.5 text-primary">
+                    <span class="text-lg">
+                      <i class="fa-regular fa-user"></i>
+                    </span>
+                    <span>DBS Checked</span>
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -773,39 +826,6 @@
                   <img src="./assets/icons/altius-assured.jpg" alt="Altius Assured" />
                 </div>
               </div>
-
-              <div class="hidden border-t-2 border-primary-2 rounded-sm shadow-md mt-2 md:block">
-                <div class="flex items-center rounded-md p-5">
-                  <div class="flex-1">
-                    <h3 class="text-xl font-bold mb-4">Lorem ipsum dolor sit.</h3>
-                    <div class="flex flex-col mb-5">
-                      <a
-                        class="inline-block text-3xl font-semibold text-primary-2"
-                        href="tel:01125125125"
-                        >01125125125</a
-                      >
-                      <a class="inline-block text-3xl font-semibold" href="tel:01125125125"
-                        >01125125125</a
-                      >
-                      <p class="text-sm text-gray-400 italic">(No text message)</p>
-                    </div>
-
-                    <p class="flex items-center gap-1.5 text-primary-2">
-                      <span class="text-lg">
-                        <i class="fa-regular fa-user"></i>
-                      </span>
-                      <span>DBS Checked</span>
-                    </p>
-                  </div>
-                  <div class="w-[150px]">
-                    <img
-                      class="max-w-full w-full h-auto"
-                      src="./assets/images/avatar.jpg"
-                      alt="Avatar"
-                    />
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -813,25 +833,24 @@
       <!-- ===================== About US End ================== -->
 
       <!-- ===================== Services Start ================== -->
-      <section class="py-16 bg-gray-800" id="services">
+      <section class="py-8 lg:py-14 bg-secondary" id="services">
         <div class="wrapper">
-          <div class="max-w-4xl w-full mx-auto text-center text-white">
-            <div class="flex flex-col-reverse">
-              <h2 class="text-2xl font-bold mb-3 md:text-3xl sm:mb-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              </h2>
-              <h3 class="text-xl font-bold mb-2">Our Services</h3>
-            </div>
-
+          <div class="max-w-5xl mx-auto text-center text-whiteColor">
+            <h2 class="text-2xl font-bold mb-3 md:text-3xl">
+              Lorem ipsum dolor sit amet consectetur.
+            </h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat autem voluptates
-              rerum. Natus est qui doloribus at similique, harum officia?
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae rem hic commodi dolore
+              dolorem esse!
             </p>
           </div>
 
           <div class="mt-8 grid grid-cols-1 gap-4 xs:grid-cols-2 md:grid-cols-3 lg:mt-10 lg:gap-5">
             <!-- Item 1 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-anchor"></i>
               </div>
@@ -842,10 +861,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 2 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-key"></i>
               </div>
@@ -856,10 +878,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 3 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-shield-halved"></i>
               </div>
@@ -870,10 +895,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 4 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-anchor"></i>
               </div>
@@ -884,10 +912,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 5 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-key"></i>
               </div>
@@ -898,10 +929,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 6 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-shield-halved"></i>
               </div>
@@ -912,7 +946,7 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
           </div>
 
           <div
@@ -920,7 +954,10 @@
             id="services-cards"
           >
             <!-- Item 1 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-anchor"></i>
               </div>
@@ -931,10 +968,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 2 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-key"></i>
               </div>
@@ -945,10 +985,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 3 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-shield-halved"></i>
               </div>
@@ -959,9 +1002,12 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
             <!-- Item 4 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-anchor"></i>
               </div>
@@ -972,10 +1018,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 5 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-key"></i>
               </div>
@@ -986,10 +1035,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 6 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-shield-halved"></i>
               </div>
@@ -1000,9 +1052,12 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
             <!-- Item 7 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-anchor"></i>
               </div>
@@ -1013,10 +1068,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 8 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-key"></i>
               </div>
@@ -1027,10 +1085,13 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
 
             <!-- Item 9 -->
-            <div class="flex flex-col items-center text-center bg-white rounded-md p-4 shadow-md">
+            <a
+              href="#"
+              class="flex flex-col items-center text-center bg-whiteColor rounded-md p-4 shadow-md transition-all duration-200 hover:bg-tertiary"
+            >
               <div class="text-4xl text-primary mb-3 md:mb-4">
                 <i class="fa-solid fa-shield-halved"></i>
               </div>
@@ -1041,12 +1102,12 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ab quas nemo
                 molestias! Odit, soluta.
               </p>
-            </div>
+            </a>
           </div>
 
           <div class="flex justify-center">
             <button
-              class="py-2 px-8 border border-primary bg-primary text-white rounded-full transition-all duration-200 hover:bg-primary-2"
+              class="py-2 px-8 border border-orangeColor bg-orangeColor text-whiteColor rounded-md transition-all duration-200 hover:bg-transparent hover:text-orangeColor"
               id="view-all-btn"
             >
               View All
@@ -1057,15 +1118,15 @@
       <!-- ===================== Services End ================== -->
 
       <!-- ===================== Testimonials Start ================== -->
-      <article class="py-16">
+      <article class="py-8 lg:py-14">
         <div class="wrapper">
-          <h2 class="text-2xl text-center font-bold mb-3 md:text-3xl">
-            What Our Clients Say About Us
-          </h2>
-          <p class="text-center">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae rem hic commodi dolore
-            dolorem esse!
-          </p>
+          <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-3 md:text-3xl">What Our Clients Say About Us</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae rem hic commodi dolore
+              dolorem esse!
+            </p>
+          </div>
 
           <div class="mt-8 lg:mt-10">
             <div class="relative owl-carousel md:px-12" id="testimonials-slider">
@@ -1083,7 +1144,7 @@
                     <h5 class="text-lg font-semibold leading-none lg:leading-normal lg:text-base">
                       Sarah N.
                     </h5>
-                    <p class="text-gray-500 italic lg:text-xs">Lorem ipsum dolor</p>
+                    <p class="italic lg:text-xs">Lorem ipsum dolor</p>
                   </div>
                 </div>
                 <div class="flex-1">
@@ -1107,7 +1168,7 @@
                       <p class="text-sm md:text-base">Verified Review</p>
                     </div>
 
-                    <span class="block text-sm md:text-base text-yellow-500 tracking-tighter">
+                    <span class="block text-sm md:text-base text-yellowColor tracking-tighter">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
@@ -1132,7 +1193,7 @@
                     <h5 class="text-lg font-semibold leading-none lg:leading-normal lg:text-base">
                       Sarah N.
                     </h5>
-                    <p class="text-gray-500 italic lg:text-xs">Lorem ipsum dolor</p>
+                    <p class="italic lg:text-xs">Lorem ipsum dolor</p>
                   </div>
                 </div>
                 <div class="flex-1">
@@ -1156,7 +1217,7 @@
                       <p class="text-sm md:text-base">Verified Review</p>
                     </div>
 
-                    <span class="block text-sm md:text-base text-yellow-500 tracking-tighter">
+                    <span class="block text-sm md:text-base text-yellowColor tracking-tighter">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
@@ -1180,7 +1241,7 @@
                     <h5 class="text-lg font-semibold leading-none lg:leading-normal lg:text-base">
                       Sarah N.
                     </h5>
-                    <p class="text-gray-500 italic lg:text-xs">Lorem ipsum dolor</p>
+                    <p class="italic lg:text-xs">Lorem ipsum dolor</p>
                   </div>
                 </div>
                 <div class="flex-1">
@@ -1204,7 +1265,7 @@
                       <p class="text-sm md:text-base">Verified Review</p>
                     </div>
 
-                    <span class="block text-sm md:text-base text-yellow-500 tracking-tighter">
+                    <span class="block text-sm md:text-base text-yellowColor tracking-tighter">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
@@ -1229,7 +1290,7 @@
                     <h5 class="text-lg font-semibold leading-none lg:leading-normal lg:text-base">
                       Sarah N.
                     </h5>
-                    <p class="text-gray-500 italic lg:text-xs">Lorem ipsum dolor</p>
+                    <p class="italic lg:text-xs">Lorem ipsum dolor</p>
                   </div>
                 </div>
                 <div class="flex-1">
@@ -1253,7 +1314,7 @@
                       <p class="text-sm md:text-base">Verified Review</p>
                     </div>
 
-                    <span class="block text-sm md:text-base text-yellow-500 tracking-tighter">
+                    <span class="block text-sm md:text-base text-yellowColor tracking-tighter">
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
@@ -1270,7 +1331,7 @@
       <!-- ===================== Testimonials End ================== -->
 
       <!-- ===================== Locations Start ================== -->
-      <section class="py-16 bg-gray-800 text-white" id="location">
+      <section class="py-8 lg:py-14 bg-grayLight" id="location">
         <div class="wrapper">
           <div class="max-w-5xl w-full mx-auto text-center">
             <h2 class="text-2xl font-bold mb-3 md:text-3xl">Locations We Serve</h2>
@@ -1280,17 +1341,15 @@
             </p>
           </div>
 
-          <div
-            class="mt-8 grid grid-cols-1 gap-4 max-w-5xl w-full mx-auto xs:grid-cols-2 md:grid-cols-3 lg:mt-10"
-          >
-            <ul class="flex flex-col gap-2 lg:px-4">
+          <div class="mt-8 max-w-5xl w-full mx-auto lg:mt-10">
+            <ul class="grid grid-cols-1 gap-4 xs:grid-cols-2 md:grid-cols-3">
               <li class="flex gap-3">
                 <span class="text-2xl text-softRed">
                   <i class="fa-solid fa-location-dot"></i>
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
+                  <p class="italic text-secondary">49315</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1299,7 +1358,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
+                  <p class="italic text-secondary">49385</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1308,7 +1367,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
+                  <p class="italic text-secondary">49315</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1317,7 +1376,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
+                  <p class="italic text-secondary">49385</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1326,7 +1385,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
+                  <p class="italic text-secondary">49315</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1335,27 +1394,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
-                </div>
-              </li>
-            </ul>
-            <ul class="flex flex-col gap-2 lg:px-4">
-              <li class="flex gap-3">
-                <span class="text-2xl text-softRed">
-                  <i class="fa-solid fa-location-dot"></i>
-                </span>
-                <div>
-                  <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-2xl text-softRed">
-                  <i class="fa-solid fa-location-dot"></i>
-                </span>
-                <div>
-                  <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
+                  <p class="italic text-secondary">49385</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1364,7 +1403,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
+                  <p class="italic text-secondary">49315</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1373,7 +1412,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
+                  <p class="italic text-secondary">49385</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1382,7 +1421,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
+                  <p class="italic text-secondary">49315</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1391,27 +1430,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
-                </div>
-              </li>
-            </ul>
-            <ul class="flex flex-col gap-2 lg:px-4">
-              <li class="flex gap-3">
-                <span class="text-2xl text-softRed">
-                  <i class="fa-solid fa-location-dot"></i>
-                </span>
-                <div>
-                  <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
-                </div>
-              </li>
-              <li class="flex gap-3">
-                <span class="text-2xl text-softRed">
-                  <i class="fa-solid fa-location-dot"></i>
-                </span>
-                <div>
-                  <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
+                  <p class="italic text-secondary">49385</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1420,7 +1439,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
+                  <p class="italic text-secondary">49315</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1429,7 +1448,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
+                  <p class="italic text-secondary">49385</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1438,7 +1457,7 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
-                  <p class="italic text-gray-400">49315</p>
+                  <p class="italic text-secondary">49315</p>
                 </div>
               </li>
               <li class="flex gap-3">
@@ -1447,7 +1466,43 @@
                 </span>
                 <div>
                   <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
-                  <p class="italic text-gray-400">49385</p>
+                  <p class="italic text-secondary">49385</p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-2xl text-softRed">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+                <div>
+                  <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
+                  <p class="italic text-secondary">49315</p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-2xl text-softRed">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+                <div>
+                  <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
+                  <p class="italic text-secondary">49385</p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-2xl text-softRed">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+                <div>
+                  <h5 class="text-base font-semibold leading-tight">Byron Center, MI</h5>
+                  <p class="italic text-secondary">49315</p>
+                </div>
+              </li>
+              <li class="flex gap-3">
+                <span class="text-2xl text-softRed">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+                <div>
+                  <h5 class="text-base font-semibold leading-tight">East Grand Rapids, MI</h5>
+                  <p class="italic text-secondary">49385</p>
                 </div>
               </li>
             </ul>
@@ -1457,12 +1512,14 @@
       <!-- ===================== Locations End ================== -->
 
       <!-- ===================== CTA Start ================== -->
-      <section class="relative py-12 bg-banner bg-no-repeat bg-center bg-cover text-white">
-        <div class="absolute inset-0 bg-black/60"></div>
+      <section
+        class="relative py-8 lg:py-14 bg-banner bg-no-repeat bg-center bg-cover text-whiteColor"
+      >
+        <div class="absolute inset-0 bg-overlay"></div>
         <div class="relative wrapper flex flex-col gap-6 items-center z-10 lg:flex-row">
           <div class="w-full flex flex-col items-center text-center lg:w-1/2">
-            <h3 class="text-xl font-bold md:text-2xl">Lorem, ipsum 24 Hour Locksmith</h3>
-            <p class="italic text-yellow-500">
+            <h2 class="text-xl font-bold md:text-2xl">Lorem, ipsum 24 Hour Locksmith</h2>
+            <p class="italic font-medium">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, omnis?
             </p>
           </div>
@@ -1472,7 +1529,7 @@
               class="flex flex-col items-center text-center border py-2 px-6 md:py-3 md:px-8"
             >
               <h3 class="text-xl font-bold md:text-2xl">Serving Locksmith</h3>
-              <p class="text-2xl text-yellow-500 font-bold md:text-3xl">Call 01125-125-125</p>
+              <p class="text-2xl text-orangeColor font-bold md:text-3xl">Call 01125-125-125</p>
             </a>
           </div>
         </div>
@@ -1480,17 +1537,23 @@
       <!-- ===================== CTA End ================== -->
 
       <!-- ===================== Contact Start ================== -->
-      <section class="py-16" id="contact">
+      <section class="py-8 lg:py-14" id="contact">
         <div class="wrapper">
-          <h2 class="text-2xl text-center font-bold md:text-3xl">Contact Us</h2>
+          <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-3 md:text-3xl">Contact Us</h2>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae rem hic commodi dolore
+              dolorem esse!
+            </p>
+          </div>
 
           <div
-            class="mt-8 grid grid-cols-1 gap-3 text-white xs:grid-cols-2 lg:grid-cols-3 lg:mt-10 md:gap-4 lg:gap-5"
+            class="mt-8 grid grid-cols-1 gap-3 xs:grid-cols-2 lg:grid-cols-3 lg:mt-10 md:gap-4 lg:gap-5"
           >
             <div
-              class="flex items-center gap-2 bg-gray-800 rounded-md shadow-md py-2 px-3 md:gap-4 md:py-3 md:px-5"
+              class="flex items-center gap-2 bg-grayLight rounded-md shadow-md py-2 px-3 md:gap-4 md:py-3 md:px-5"
             >
-              <span class="text-2xl text-softRed md:text-3xl">
+              <span class="text-2xl text-orangeColor md:text-3xl">
                 <i class="fa-solid fa-location-dot"></i>
               </span>
               <address>
@@ -1500,30 +1563,42 @@
             </div>
 
             <div
-              class="flex items-center gap-2 bg-gray-800 rounded-md shadow-md py-2 px-3 md:gap-4 md:py-3 md:px-5"
+              class="flex items-center gap-2 bg-grayLight rounded-md shadow-md py-2 px-3 md:gap-4 md:py-3 md:px-5"
             >
-              <span class="text-2xl text-softRed md:text-3xl">
+              <span class="text-2xl text-orangeColor md:text-3xl">
                 <i class="fa-solid fa-phone"></i>
               </span>
               <div class="flex flex-col">
-                <a class="inline-block" href="tel:01125125125" class="text-lg">01125 125 125</a>
-                <a class="inline-block" href="tel:01125125125" class="text-lg font-bold"
+                <a
+                  class="inline-block transition-all duration-200 hover:text-orangeColor"
+                  href="tel:01125125125"
+                  >01125 125 125</a
+                >
+                <a
+                  class="inline-block transition-all duration-200 hover:text-orangeColor"
+                  href="tel:01125125125"
                   >01125 125 125</a
                 >
               </div>
             </div>
 
             <div
-              class="flex items-center gap-2 bg-gray-800 rounded-md shadow-md py-2 px-3 xs:col-span-2 sm:col-span-1 md:gap-4 md:py-3 md:px-5"
+              class="flex items-center gap-2 bg-grayLight rounded-md shadow-md py-2 px-3 xs:col-span-2 sm:col-span-1 md:gap-4 md:py-3 md:px-5"
             >
-              <span class="text-2xl text-softRed md:text-3xl">
+              <span class="text-2xl text-orangeColor md:text-3xl">
                 <i class="fa-solid fa-envelope"></i>
               </span>
               <div class="flex flex-col">
-                <a class="inline-block" href="mailto:info@locksmithlock.co.uk">
+                <a
+                  class="inline-block transition-all duration-200 hover:text-orangeColor"
+                  href="mailto:info@locksmithlock.co.uk"
+                >
                   info@locksmithlock.co.uk
                 </a>
-                <a class="inline-block" href="mailto:support@locksmithlock.co.uk">
+                <a
+                  class="inline-block transition-all duration-200 hover:text-orangeColor"
+                  href="mailto:support@locksmithlock.co.uk"
+                >
                   support@locksmithlock.co.uk
                 </a>
               </div>
@@ -1531,15 +1606,14 @@
           </div>
 
           <div
-            class="mt-3 flex flex-col gap-4 bg-gray-800 rounded-md shadow-md p-4 md:flex-row md:gap-0 md:mt-4 lg:mt-5"
+            class="mt-3 flex flex-col gap-4 bg-grayLight rounded-md shadow-md p-4 md:flex-row md:gap-0 md:mt-4 lg:mt-5"
           >
             <div class="w-full md:w-1/2 md:pe-2">
               <iframe
-                class="rounded-sm min-h-60 h-full"
+                class="border border-gray-200 rounded-md min-h-60 h-full"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7687.115623138421!2d-0.0723871134293148!3d51.49504916499399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon%2C%20UK!5e0!3m2!1sen!2sid!4v1729478758432!5m2!1sen!2sid"
                 width="100%"
                 height="100%"
-                style="border: 0"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -1547,14 +1621,14 @@
             </div>
 
             <div class="w-full md:w-1/2 md:ps-2">
-              <form class="w-full text-white">
+              <form class="w-full">
                 <div
                   class="grid grid-cols-1 gap-4 mb-4 sm:grid-cols-2 sm:gap-2 md:grid-cols-1 md:gap-4 lg:grid-cols-2 lg:gap-2"
                 >
                   <div class="flex flex-col gap-1">
                     <label class="text-sm" for="name">Name</label>
                     <input
-                      class="bg-gray-700 py-2 px-3 text-base rounded-sm focus:outline-none"
+                      class="py-2 px-3 text-base rounded-md border border-gray-200 focus:outline-none focus:border-orangeColor"
                       type="text"
                       id="name"
                       name="name"
@@ -1563,7 +1637,7 @@
                   <div class="flex flex-col gap-1">
                     <label class="text-sm" for="email">E-Mail</label>
                     <input
-                      class="bg-gray-700 py-2 px-3 text-base rounded-sm focus:outline-none"
+                      class="py-2 px-3 text-base rounded-md border border-gray-200 focus:outline-none focus:border-orangeColor"
                       type="text"
                       id="email"
                       name="email"
@@ -1576,7 +1650,7 @@
                   <div class="flex flex-col gap-1">
                     <label class="text-sm" for="phone">Phone</label>
                     <input
-                      class="bg-gray-700 py-2 px-3 text-base rounded-sm focus:outline-none"
+                      class="py-2 px-3 text-base rounded-md border border-gray-200 focus:outline-none focus:border-orangeColor"
                       type="tel"
                       id="phone"
                       name="phone"
@@ -1585,7 +1659,7 @@
                   <div class="flex flex-col gap-1">
                     <label class="text-sm" for="subject">Subject</label>
                     <input
-                      class="bg-gray-700 py-2 px-3 text-base rounded-sm focus:outline-none"
+                      class="py-2 px-3 text-base rounded-md border border-gray-200 focus:outline-none focus:border-orangeColor"
                       type="text"
                       id="subject"
                       name="subject"
@@ -1595,7 +1669,7 @@
                 <div class="flex flex-col gap-1 mb-4">
                   <label class="text-sm" for="message">Message</label>
                   <textarea
-                    class="bg-gray-700 py-2 px-3 text-base rounded-sm focus:outline-none resize-y min-h-40"
+                    class="py-2 px-3 text-base rounded-md border border-gray-200 focus:outline-none focus:border-orangeColor resize-y min-h-40"
                     name="message"
                     id="message"
                   ></textarea>
@@ -1603,7 +1677,7 @@
 
                 <div class="mb-4">
                   <input class="w-4" type="checkbox" id="updates" name="updates" />
-                  <label class="text-sm text-gray-400" for="updates"
+                  <label class="text-sm" for="updates"
                     >I consent to Williams Locks contacting me in the future with news, service
                     information and other updates</label
                   >
@@ -1612,7 +1686,7 @@
                 <div>
                   <button
                     type="submit"
-                    class="py-1.5 px-4 border border-primary bg-primary text-white rounded-md transition-all duration-200 hover:bg-primary-2 hover:border-primary-2"
+                    class="py-1.5 px-4 border border-orangeColor bg-orangeColor text-whiteColor rounded-md transition-all duration-200 hover:bg-transparent hover:text-orangeColor"
                   >
                     Submit
                   </button>
@@ -1626,7 +1700,7 @@
     </main>
 
     <!-- ===================== Footer Start ================== -->
-    <footer class="bg-slate-900 text-white">
+    <footer class="bg-primary text-whiteColor">
       <div class="wrapper">
         <div class="grid grid-cols-2 gap-4 py-10 sm:grid-cols-3 md:grid-cols-5">
           <div
@@ -1641,7 +1715,7 @@
               <h2
                 class="flex-1 flex flex-col text-xl text-start font-bold leading-none lg:text-2xl"
               >
-                <span class="text-lg text-primary lg:text-xl">Aberdeen</span>
+                <span class="text-lg lg:text-xl">Aberdeen</span>
                 <span>Locksmith</span>
               </h2>
             </a>
@@ -1649,102 +1723,170 @@
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae blanditiis expedita
               praesentium provident sapiente cum, molestias ipsam adipisci iste labore.
             </p>
+
+            <div class="flex flex-col gap-2 mt-5 text-left self-start">
+              <div class="flex items-center gap-3">
+                <span class="tex-lg text-orangeColor">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+                <a
+                  href="tel:01125125125"
+                  class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >01125 125 125</a
+                >
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-lg text-orangeColor">
+                  <i class="fa-solid fa-envelope"></i>
+                </span>
+                <a
+                  href="mailto:info@locksmith.com"
+                  class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >info@locksmith.com</a
+                >
+              </div>
+              <div class="flex gap-3">
+                <span class="text-lg text-orangeColor">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+                <div class="text-gray-400">
+                  <p class="mb-1">Corporate Office</p>
+                  <address class="text-base">
+                    241 Badminton Road, <br />
+                    Downend, Bristol, BS166NR
+                  </address>
+                </div>
+              </div>
+            </div>
           </div>
 
           <ul class="flex flex-col gap-1">
             <h4 class="text-lg font-semibold mb-1">Navigation</h4>
             <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
+              <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
                 >Home</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
+              <a
+                href="#about"
+                class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
                 >About</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
+              <a
+                href="#services"
+                class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
                 >Services</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
+              <a
+                href="#location"
+                class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
                 >Locations</a
               >
             </li>
             <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
+              <a
+                href="#contact"
+                class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
                 >Contact</a
               >
             </li>
           </ul>
 
-          <ul class="flex flex-col gap-1">
-            <h4 class="text-lg font-semibold mb-1">Services</h4>
-
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Services 1</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Services 2</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Services 3</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Services 4</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Services 5</a
-              >
-            </li>
-          </ul>
-
-          <ul class="flex flex-col gap-1">
-            <h4 class="text-lg font-semibold mb-1">Helpful Links</h4>
-
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Link 1</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Link 2</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Link 3</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Link 4</a
-              >
-            </li>
-            <li>
-              <a href="#" class="text-gray-300 transition-all duration-200 hover:text-gray-400"
-                >Link 5</a
-              >
-            </li>
-          </ul>
+          <div class="col-span-2">
+            <h4 class="text-lg font-semibold mb-2">General Locksmith Services</h4>
+            <ul class="grid grid-cols-1 gap-x-4 gap-y-1 xs:grid-cols-2">
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 1</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 2</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 3</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 4</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 5</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 6</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 7</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 8</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 9</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                  >Services 10</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="py-4 border-t border-gray-600">
-          <p class="text-center text-xs text-gray-400 sm:text-sm">
-            Copyright &copy; <span id="full-year">2025</span> Locksmith. All rights reserved
+        <div
+          class="flex flex-wrap items-center gap-3 justify-center py-4 border-t border-secondary md:gap-4 lg:justify-between"
+        >
+          <p class="text-center text-gray-400 text-xs sm:text-sm">
+            &copy; <span id="full-year">2025</span> Locksmith. All rights reserved.
           </p>
+          <div class="text-sm leading-tight flex items-center gap-2">
+            <span class="block text-yellowColor tracking-tighter">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </span>
+            <p class="block font-medium">Average of <b>5</b> based on <b>104</b> Ratings</p>
+          </div>
+          <ul class="flex items-center gap-4 text-sm">
+            <li>
+              <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                >Terms of Use</a
+              >
+            </li>
+            <li>
+              <a href="#" class="text-gray-400 transition-all duration-200 hover:text-orangeColor"
+                >Sitemap</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </footer>
