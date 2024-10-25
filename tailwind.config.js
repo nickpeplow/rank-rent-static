@@ -4,6 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        xss: '388px',
         xs: '500px',
       },
       colors: {
@@ -29,6 +30,8 @@ module.exports = {
       backgroundImage: () => ({
         '24-seven': "url('../icons/24-seven.png')",
         banner: "url('../images/banner.png')",
+        'cta-bg': "url('../images/cta-bg.png')",
+        'statistic-bg': "url('../images/statistic-bg.png')",
       }),
     },
   },
